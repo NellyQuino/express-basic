@@ -6,13 +6,17 @@ const app = express()
 const port = 3000
 
 //path inicial, responderá ala url localhost:3000
-
 app.get('/', (req, res) => {
-    res.send("Hello word!")
-})
-
+        res.send("Hello word!")
+    })
+    //Respondiendo texto
 app.get('/launchx', (req, res) => {
-    res.send('Bienvenido a launchx')
+        res.send('Bienvenido a launchx')
+    })
+    //Regresar unh objeto
+app.get('/explorersInNode', (req, res) => {
+    const explorer = { name: "Explorer", msg: "Hello" }
+    res.send(explorer)
 })
 
 //Inicializamos la app
