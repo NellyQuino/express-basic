@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.send("Hello word!")
 })
 
+app.get('/launchx', (req, res) => {
+    res.send('Bienvenido a launchx')
+})
+
 //Inicializamos la app
 app.listen(port, () => {
     console.log(`Example app listing on port ${port}`)
