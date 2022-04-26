@@ -15,11 +15,14 @@ app.get('/launchx', (req, res) => {
     })
     //Regresar unh objeto
 app.get('/explorersInNode', (req, res) => {
-    const explorer = { name: "Explorer", msg: "Hello" }
-    res.send(explorer)
-})
-
-//Inicializamos la app
+        const explorer = { name: "Explorer", msg: "Hello" }
+        res.send(explorer)
+    })
+    //Query params 
+app.get('/explorers/:explorerName', (req, res) => {
+        res.send(req.params)
+    })
+    //Inicializamos la app
 app.listen(port, () => {
     console.log(`Example app listing on port ${port}`)
 })
